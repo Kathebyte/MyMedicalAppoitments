@@ -1,4 +1,4 @@
-package MyMedicalAppoitments;
+package ui;
 import java.util.Scanner;
 
 public class Menu {
@@ -8,7 +8,7 @@ public class Menu {
     /**
      * 
      */
-    static void showMenu(){
+    public static void showMenu(){
         System.out.println("Welcome to My appoitments");
         System.out.println("Select the desired option:");
 
@@ -38,10 +38,11 @@ public class Menu {
                 default:
                     System.out.println("Please select a correct answer");
             }
+            teclado.close();
         }while(response !=0);
     }
 
-    static void showPatientMenu(){
+    public static void showPatientMenu(){
         int response=0;
         do{
             System.out.println("\n\n");
@@ -68,6 +69,7 @@ public class Menu {
                     showMenu();
                     break;
             }
+            teclado.close();
         }while (response != 0);
     }
     
