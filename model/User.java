@@ -1,18 +1,16 @@
 package model;
+
 public abstract class User {
-    
     private int id;
     private String name;
     private String email;
     private String address;
     private String phoneNumber;
-   
+
     public User(String name, String email) {
-        
         this.name = name;
         this.email = email;
     }
-        
 
     public int getId() {
         return id;
@@ -50,22 +48,20 @@ public abstract class User {
         return phoneNumber;
     }
 
-    public void setPhoneNumbre(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         if (phoneNumber.length() > 8){
-            System.out.println("El numero telefonico debe de ser de 6 digitos maximo");
-        }else if(phoneNumber.length()==8){
-            this.phoneNumber = phoneNumber;}
+            System.out.println("El número telefónico debe ser de 8 dígitos máximo");
+        }else if(phoneNumber.length() == 8){
+            this.phoneNumber = phoneNumber;
+        }
     }
-
-    
 
     @Override
     public String toString() {
-        return "User: " +name + ", Email: "+email+
-        "\nAddress: "+address + ", Phone: "+ phoneNumber;
+        return "model.User: " + name + ", Email: "+email+
+                "\nAddreess: "+address+". Phone: "+phoneNumber;
     }
-    
+
     public abstract void showDataUser();
 
-    
 }

@@ -77,6 +77,8 @@ public class Menu {
                         //Obtener el usuario logueado
                         doctorLogged = d;
                         //show doctor menu
+                        UiDoctorMenu.showDoctorMenu()
+                        ;
                     }
                 }
             }if (userType == 2){
@@ -84,9 +86,10 @@ public class Menu {
                     if(p.getEmail().equals(email)){
                         emailCorrect= true;
                         patientLogged = p;
+                        UiPatientMenu.showPatientMenu();
                     }
                 }
-
+                teclado.close();
             }
         } while (emailCorrect);
     }
